@@ -4,7 +4,7 @@ import axios from "axios";
 
 const API = process.env.REACT_APP_API_URL;
 
-export default function Transactions() {
+export default function Transactions({sum}) {
   const [transactions, setTransactions] = useState([]);
 
   // Request Transactions
@@ -22,15 +22,29 @@ export default function Transactions() {
 
   return (
     <div className="Transactions">
-      {transactions.map((transaction, id)=>{
+      {transactions.map((transaction, id) => {
         return (
-          <div style={{border: '1px solid black'}} key={id}>
-
-<ol><li>{transaction.date} 
-  </li></ol>
+          <div key = {transaction.id}>
+            {" "}
+            <Transaction transaction={transaction} id={id} />
           </div>
-        )
+        );
       })}
+      <br />
+      {transactions.map((transaction, id) => {
+        let sum = 0
+        sum += Number(transaction.amount)
+        // console.log(sum.length)
+        return (
+          <div key = {transaction.id}>
+            {" "}
+          <p>{sum}</p>
+         </div>
+        )
+        
+      })
+      }
+        <h1>Total: {}</h1>
     </div>
   );
 }
