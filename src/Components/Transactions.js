@@ -44,7 +44,7 @@ export default function Transactions({sum}) {
         
       })
       }
-        <h1>Total: {}</h1>
+        <h1>Total: total expense goes here </h1>
     </div>
   );
 }
