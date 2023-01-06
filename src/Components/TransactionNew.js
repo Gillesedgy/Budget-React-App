@@ -27,7 +27,7 @@ const handleSubmit = ()=>{
       <button disabled="disabled">
         BE ABLE TO CLICK ADD AFTER COMPLETING FORM
       </button>
-      <button>BETTER LOOKING BACK BUTTON COMING SOON</button>
+      <button>BETTER LOOKING BACK BUTTON COMING SOON...</button>
     </div>
   );
 }
