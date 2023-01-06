@@ -1,11 +1,17 @@
-.Navigations{
+nav{
 border  : 1px solid black;
 padding: 2em 0;
 text-align: center;
 background-color: var(--header);
 display: flex;
-justify-content: center;
+/* flex-direction: column; */
+align-items: center;
+justify-content: space-evenly;
 }
+nav a {
+    text-decoration: none;
+    color: black;
+} 
 
 .Account-Home img{
 height: 20px;
@@ -13,5 +19,5 @@ width: auto;
 }
 
 .NewTransaction{
-    margin-top: 1em;
+    /* margin-top: 1em; */
 }

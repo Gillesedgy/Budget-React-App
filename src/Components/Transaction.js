@@ -26,7 +26,6 @@ export default function Transaction({ transaction, id }) {
           </p>
         </li>
       </ol>
-    
     </div>
   );
 }
