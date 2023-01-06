@@ -1,7 +1,68 @@
-import React from 'react'
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+
+//! API
+const API = process.env.REACT_APP_API_URL;
 
 export default function TransactionDetails() {
+  const [transaction, setTransaction] = useState([]);
+  let { id } = useParams();
+  let navigate = useNavigate();
+
+  //UseEffect
+  useEffect(() => {
+    axios
+      .get(`${API}/transactions/${id}`)
+      .then((res) => {
+        setTransaction(res.data);
+      })
+      .catch((err) => {
+        navigate(`/not-found`);
+      });
+  }, [id, navigate]);
+
   return (
-    <div>TransactionDetails</div>
-  )
+    <>
+      <article className="Transaction-Container">
+      <ol>
+        <p>
+          <b>Date:</b> {transaction.date}
+        </p>
+        <li>
+          <b> ID:</b> {transaction.id}
+          <p>
+            <b>Name:</b> {transaction.item_name}:{" "}
+            <span>$ {transaction.amount}</span>
+          </p>
+          <p>
+            {" "}
+            <b> Descritption:</b> {transaction.description}
+          </p>
+          <p>
+            <b>From:</b> {transaction.from}
+          </p>
+          <p>
+            <b>Category:</b> {transaction.category}
+          </p>
+          <p>
+            <b></b>
+          </p>
+        </li>
+      </ol>
+      </article>
+      <div className="Transaction-Buttons">
+        {" "}
+        <button onClick={()=>{
+          navigate(`/transaction/${id}`);
+        }}>BETTER DELETE BUTTON</button>
+        <button onClick={()=>{
+          navigate(`/transactions/${id}/edit`);
+        }}>BETTER EDIT BUTTON</button>
+        <button onClick={()=>{
+          navigate(`/transactions`);
+        }}>BETTER BACK BUTTON</button>
+      </div>
+    </>
+  );
 }

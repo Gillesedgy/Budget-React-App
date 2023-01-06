@@ -2,6 +2,8 @@ import React from 'react'
 
 export default function TransactionEdit() {
   return (
-    <div>TransactionEdit</div>
+    <div>TransactionEdit
+            <button disabled="disabled">BE ABLE TO USE AFTER AN INPUT</button>
+    </div>
   )
 }
