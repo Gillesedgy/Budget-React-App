@@ -6,7 +6,7 @@ const API = process.env.REACT_APP_API_URL;
 
 export default function Transactions({ sum }) {
   const [transactions, setTransactions] = useState([]);
-const [total, setTotal] = useState(0)
+  const [total, setTotal] = useState(0);
 
   // Request Transactions
   useEffect(() => {
@@ -34,15 +34,12 @@ const [total, setTotal] = useState(0)
       })}
       <br />
       <div>
-        {
-  transactions.reduce((acc, transaction) => {
-      return    acc + transaction.amount
-          
-          // .toLocaleString("en-US");;
-      
- },0)
+        {transactions.reduce((acc, transaction) => {
+          let sum = 0 
+          return acc + transaction.amount;
 
-        }
+          // .toLocaleString("en-US");;
+        }, 0)}
         {/* {transactions.map((transaction, id)=>{
           let sum = 0
           return (
@@ -56,10 +53,8 @@ const [total, setTotal] = useState(0)
           )
         })} */}
       </div>
-      {
-    
-      }
-      
+     
+
       <h1>Total: total expense goes here: </h1>
     </div>
   );
