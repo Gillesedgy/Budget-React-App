@@ -1,0 +1,8 @@
+.Transaction-Show a  {
+    text-decoration: none;
+    color:black
+}
+.Transaction-Show a :hover {
+    text-decoration: none;
+    color:green
+}

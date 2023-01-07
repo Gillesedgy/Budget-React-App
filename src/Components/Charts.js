@@ -27,7 +27,7 @@ export default function Charts() {
   return (
     <div>
       {/* <PolarArea data={data}></PolarArea> */}
-      <Doughnut data={data}></Doughnut>
+      {/* <Doughnut data={data}></Doughnut> */}
     </div>
   );
 }

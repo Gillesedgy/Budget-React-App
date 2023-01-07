@@ -1,32 +1,63 @@
-import { useEffect, useNavigate } from "react";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import axios from "axios";
 
 //?
+const API = process.env.REACT_APP_API_URL
 export default function TransactionNew() {
+  let navigate = useNavigate()
+  const [transaction, setTransaction] = useState({
+    date: "",
+    id: uuidv4(),
+    item_name: "",
+    amount: 0,
+    from: "",
+    description: "",
+    category: "",
+  });
 
-// SUBMIT
-const handleSubmit = ()=>{
+  // SUBMIT
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    axios.post(`${API}/transactions`, transaction).then((res)=>{
+navigate('/transactions')
+    }).catch((err)=>{
+      console.log(err)
+    })
+  };
+  //TEXT CHANGES
+  const handleTextChange = (event) => {
+    setTransaction({ ...transaction, [event.target.id]: event.target.value });
+  };
 
-}
-//TEXT CHANGES
-  const handleTextChange = (e)=>{
-
-  }
   return (
     <div className="NewTransaction-Container">
-      <form onSubmit={handleSubmit} >
-        <label htmlFor="date">Date</label>
-        <input type="text" 
-        id=""
-        value={''}
-        onChange={handleTextChange}
-        />
-  
-                <input type="submit"/>
-      </form >
-      <button disabled="disabled">
+      <form onSubmit={handleSubmit}>
+
+        <label htmlFor="date">Date:{' '}</label>
+        <input type="text" id="date" value={transaction.date} placeholder="MM/DD/YYY" onChange={handleTextChange} required/>
+      
+        <label htmlFor="id">ID:{' '}</label>
+        <input type="text" id="id" value={transaction.id} placeholder="" onChange={handleTextChange} required/>
+
+        <label htmlFor="item_name">Name:</label>
+        <input type="text" id="item_name" value={transaction.item_name} placeholder="" onChange={handleTextChange} required/>
+
+        <label htmlFor="amount">Amount:{' '}</label>
+        <input type="text" id="amount" value={transaction.amount} onChange={handleTextChange} required/>
+
+        <label htmlFor="from">From:{' '}</label>
+        <input type="text" id="from" value={transaction.from} onChange={handleTextChange} required/>
+
+        <label htmlFor="description">Description:{' '}</label>
+        <input type="text" id="description" value={transaction.description} onChange={handleTextChange} required/>
+
+        <input type="submit" />
+      </form>
+      {/* <button disabled="disabled">
         BE ABLE TO CLICK ADD AFTER COMPLETING FORM
-      </button>
+      </button> */}
       <button>BETTER LOOKING BACK BUTTON COMING SOON...</button>
     </div>
   );
