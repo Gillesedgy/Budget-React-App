@@ -1,14 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
-
+import './TransactionDetails.css'
 //! API
 const API = process.env.REACT_APP_API_URL;
 
 export default function TransactionDetails() {
   const [transaction, setTransaction] = useState([]);
   let { id } = useParams();
-  console.log(id)
   let navigate = useNavigate();
 
   //UseEffect
@@ -17,7 +16,7 @@ export default function TransactionDetails() {
       .get(`${API}/transactions/${id}`)
       .then((res) => {
         setTransaction(res.data);
-        console.log(res.data)
+        console.log(res.data);
       })
       .catch((err) => {
         navigate(`/not-found`);
@@ -33,7 +32,9 @@ export default function TransactionDetails() {
       .catch((e) => console.error(e));
   };
   return (
+  
     <>
+    
       <article className="Transaction-Container">
         <ol>
           <p>
@@ -41,7 +42,6 @@ export default function TransactionDetails() {
           </p>
           <li>
             <b> ID:</b> {transaction.id}
-  
             <p>
               <b>Name:</b> {transaction.item_name}:{" "}
               <span>$ {transaction.amount}</span>

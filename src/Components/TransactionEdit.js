@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
-
+import './Edit.css'
 const API = process.env.REACT_APP_API_URL;
 
 export default function TransactionEdit() {
@@ -104,6 +104,18 @@ export default function TransactionEdit() {
             onChange={handleTextChange}
             required
           />
+            <label htmlFor="category">Category: </label>
+        <select
+          id="category"
+          onChange={handleTextChange}
+          value={transaction.category}
+          className="Select"
+        >
+          <option value=""></option>
+          <option id="income">Income</option>
+          <option id="expense">Expense</option>
+          {/* <option value=""></option> */}
+        </select>
 
           <input
             type="submit"

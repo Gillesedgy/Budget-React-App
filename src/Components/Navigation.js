@@ -5,6 +5,7 @@ import account from "../Assets/account-home.png";
 import newLight from "../Assets/new-light.png";
 
 export default function Navigation() {
+   
   let navigate = useNavigate();
   return (
     <nav>
@@ -20,6 +21,7 @@ export default function Navigation() {
       <Link to={"/"}>
         {" "}
         <h1>Budget App</h1>
+      
       </Link>
 
       {/* //* I want buttons to be far right of the screen --> CCS  */}
