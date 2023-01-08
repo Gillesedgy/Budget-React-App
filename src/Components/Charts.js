@@ -1,16 +1,18 @@
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-import { Doughnut, } from "react-chartjs-2";
+import { Doughnut } from "react-chartjs-2";
 
 //
-import './Chart.css'
+import "./Chart.css";
 //
 ChartJS.register(ArcElement, Tooltip, Legend);
-
+export default function Charts({ transactions }) {
 const config = {
   data: {
-    datasets: [
-      {
-        data: [11, 16, 7, 3, 14],
+    datasets: [{
+        data: transactions.map((data)=>
+        (Number(data.amount)) 
+        ),
+      
         backgroundColor: [
           "rgb(255, 99, 132)",
           "rgb(75, 192, 192)",
@@ -18,7 +20,7 @@ const config = {
           "rgb(201, 203, 207)",
           "rgb(54, 162, 235)",
         ],
-        hoverOffset: 4,
+        hoverOffset: 9,
         borderRadius: 30,
         spacing: 20,
         weight: 100,
@@ -27,10 +29,12 @@ const config = {
     ],
   },
   options: {
-    cutout: 150,
+    cutout: 120,
   },
 };
-export default function Charts({transactions}) {
+
+
+
 
   // TOTAL EXPENSES...
   let sum = transactions.reduce((acc, transaction) => {
@@ -44,8 +48,16 @@ export default function Charts({transactions}) {
   }, 0);
   return (
     <div className="Chart-Container">
-    <Doughnut {...config}></Doughnut>
-    <h3 className="Title">Amount:{' '}<span className="Sum">$ <em> {sum.toLocaleString("en-US")}</em></span></h3> 
+      <Doughnut 
+      {...config}
+      // data={data}
+      ></Doughnut>
+      <h3 className="Title">
+        Amount:{" "}
+        <span className="Sum">
+          $ <em> {sum.toLocaleString("en-US")}</em>
+        </span>
+      </h3>
     </div>
   );
 }
