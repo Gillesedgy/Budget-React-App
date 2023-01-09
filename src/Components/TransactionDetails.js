@@ -101,7 +101,7 @@ export default function TransactionDetails() {
             navigate(`/transactions`);
           }}
         >
-          BETTER BACK BUTTON
+         🔙
         </button>
       </div>
     </>

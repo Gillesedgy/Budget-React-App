@@ -129,7 +129,7 @@ export default function TransactionEdit() {
             navigate(`/transactions/${id}`);
           }}
         >
-          BETTER LOOKING BACK BUTTON COMING SOON...
+        🔙
         </button>
       </div>
     </div>

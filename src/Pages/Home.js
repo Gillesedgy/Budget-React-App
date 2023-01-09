@@ -1,11 +1,15 @@
+import "./Home.css";
+import money from "../Assets/money.mp4";
 export default function Home() {
   return (
     <div className="Home">
       <h1>Welcome to your Budget App </h1>
-      <img
-        src="https://w0.peakpx.com/wallpaper/134/352/HD-wallpaper-time-is-money-time-money-motivational.jpg"
-        alt="img-icon"
-      />
+      <video loop autoPlay></video> <source src={money} type="video/mp4" />
+      <div className="overlay"></div>
+      <div className="text">
+        <h3>Live like no one else</h3>
+        <h2>So one day you can live like no one else</h2>
+      </div>
     </div>
   );
 }

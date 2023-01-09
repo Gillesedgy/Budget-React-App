@@ -6,7 +6,7 @@ import "./Transaction.css";
 export default function Transaction({ transaction, id }) {
   let navigate = useNavigate();
   return (
-    <div style={{}} className="Transaction-Show" key={id}>
+    <div className="Transaction-Show" key={id}>
       {/* TABLE ELEMENTS */}
       <table>
         <thead>
@@ -25,16 +25,25 @@ export default function Transaction({ transaction, id }) {
 
             <td>{transaction.date}</td>
             <td>{transaction.item_name}</td>
-            <td className="Amount">{transaction.amount}</td>
-          
-        <button   onClick={() => {
-            navigate(`/transactions/${id}/edit`);
-          }} >"📝"</button>
-    
+            <td
+              style={{
+                color: transaction.category === "Income" ? "green " : "red",
+              }}
+              className="Amount"
+            >
+              <b style={{ color: "black" }}>$</b> {transaction.amount}
+            </td>
+
+            <button
+              onClick={() => {
+                navigate(`/transactions/${id}/edit`);
+              }}
+            >
+              "📝"
+            </button>
           </tr>
         </tbody>
       </table>
-     
     </div>
   );
 }

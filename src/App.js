@@ -3,6 +3,7 @@ import "./App.css";
 import { useState } from "react";
 // COMPONENTS
 import Navigation from "./Components/Navigation";
+import Footer from "./Components/Footer";
 import Charts from "./Components/Charts";
 //PAGES
 
@@ -14,7 +15,7 @@ import Error from "./Pages/Error";
 import New from "./Pages/New";
 // import { Chart } from "chart.js";
 function App() {
-  const [total, setTotal] = useState(0);
+  
   return (
     <div className="App">
       <Router>
@@ -31,6 +32,7 @@ function App() {
             <Route path="*" element={<Error />}></Route>
           </Routes>
         </main>
+        {/* <Footer/> */}
       </Router>
     </div>
   );

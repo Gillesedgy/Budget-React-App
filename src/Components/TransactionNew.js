@@ -46,7 +46,7 @@ export default function TransactionNew() {
           onChange={handleTextChange}
           required
         />
-<br />
+        <br />
         <label htmlFor="id">ID: </label>
         <input
           type="text"
@@ -106,12 +106,18 @@ export default function TransactionNew() {
           <option id="expense">Expense</option>
           {/* <option value="premium">Premium</option> */}
         </select>
-    
+
         <p> Select one from the given options:</p>
         <input type="submit" />
       </form>
-      
-      <button onClick={()=>{navigate(`/transactions`)}}>BETTER LOOKING BACK BUTTON COMING SOON...</button>
+
+      <button
+        onClick={() => {
+          navigate(`/transactions`);
+        }}
+      >
+        🔙
+      </button>
     </div>
   );
 }

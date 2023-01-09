@@ -25,6 +25,7 @@ table {
     border: 1px solid #999;
     padding: 0.5rem;
     text-align: left;
+    width: 100px;
    
   }
   
@@ -32,17 +33,13 @@ table {
   th{
     background-color: grey;
 
-
 }
- .TableId {
-    border: none;
+ /* .TableId {
+  
   width: 100px;
  }
-  .Amount{
-    border-right: 6px solid red;
-    border-bottom: 1px solid red;
-  }
+ 
 
   .TableHead{
     width: 100px;
-  }
+  } */
