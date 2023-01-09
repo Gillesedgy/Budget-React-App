@@ -35,7 +35,7 @@ export default function TransactionDetails() {
   
     <>
     
-      <article className="Transaction-Container">
+      {/* <article className="Transaction-Container">
         <ol>
           <p>
             <b>Date:</b> {transaction.date}
@@ -61,7 +61,31 @@ export default function TransactionDetails() {
             </p>
           </li>
         </ol>
-      </article>
+      </article> */}
+       <table>
+        <thead>
+          <tr>
+            <th >ID</th>
+            <th >Date</th>
+            <th >Name</th>
+            <th >Desciprion</th>
+            <th >From</th>
+            <th >Category</th>
+            <th >amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td >  {transaction.id}</td>
+            <td>{transaction.date}</td>
+            <td>{transaction.item_name}</td>
+            <td>{transaction.description}</td>
+            <td>{transaction.from}</td>
+            <td>{transaction.category}</td>
+            <td className="Amount">{transaction.amount}</td>
+          </tr>
+        </tbody>
+      </table>
       <div className="Transaction-Buttons">
         {" "}
         <button onClick={handleDelete}>BETTER DELETE BUTTON</button>

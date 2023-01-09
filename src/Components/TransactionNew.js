@@ -46,7 +46,7 @@ export default function TransactionNew() {
           onChange={handleTextChange}
           required
         />
-
+<br />
         <label htmlFor="id">ID: </label>
         <input
           type="text"
@@ -56,7 +56,7 @@ export default function TransactionNew() {
           onChange={handleTextChange}
           required
         />
-
+        <br />
         <label htmlFor="item_name">Name:</label>
         <input
           type="text"
@@ -66,7 +66,7 @@ export default function TransactionNew() {
           onChange={handleTextChange}
           required
         />
-
+        <br />
         <label htmlFor="amount">Amount: </label>
         <input
           type="number"
@@ -75,7 +75,7 @@ export default function TransactionNew() {
           onChange={handleTextChange}
           required
         />
-
+        <br />
         <label htmlFor="from">From: </label>
         <input
           type="text"
@@ -84,7 +84,7 @@ export default function TransactionNew() {
           onChange={handleTextChange}
           required
         />
-
+        <br />
         <label htmlFor="description">Description: </label>
         <input
           type="text"
@@ -93,6 +93,7 @@ export default function TransactionNew() {
           onChange={handleTextChange}
           required
         />
+        <br />
         <label htmlFor="category">Category: </label>
         <select
           id="category"
@@ -100,25 +101,17 @@ export default function TransactionNew() {
           value={transaction.category}
           className="Select"
         >
-          <option value=""></option>
+          <option value="">----------</option>
           <option id="income">Income</option>
           <option id="expense">Expense</option>
           {/* <option value="premium">Premium</option> */}
         </select>
-        {/* <input
-          type="text"
-          id="category"
-          value={transaction.category}
-          onChange={handleTextChange}
-          // required
-        /> */}
+    
         <p> Select one from the given options:</p>
         <input type="submit" />
       </form>
-      {/* <button disabled="disabled">
-        BE ABLE TO CLICK ADD AFTER COMPLETING FORM
-      </button> */}
-      <button>BETTER LOOKING BACK BUTTON COMING SOON...</button>
+      
+      <button onClick={()=>{navigate(`/transactions`)}}>BETTER LOOKING BACK BUTTON COMING SOON...</button>
     </div>
   );
 }

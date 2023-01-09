@@ -1,35 +1,40 @@
-import { Link } from "react-router-dom";
-import "./Transaction.css"
+import { Link, useNavigate } from "react-router-dom";
+import "./Transaction.css";
+// icons
+// import editButton from "../Assets/editButton.png";
+//*
 export default function Transaction({ transaction, id }) {
+  let navigate = useNavigate();
   return (
-    <div className="Transaction-Show" style={{ border: "1px solid black" }} key={id}>
-      <Link to={`/transactions/${id}`}>
-        <ol>
-          <p>
-            <b>Date:</b> {transaction.date}
-          </p>
-          <li>
-            <b> ID:</b> {transaction.id}
-            <p>
-              <b>Name:</b> {transaction.item_name}:{" "}
-              <span>$ {transaction.amount}</span>
-            </p>
-            <p>
-              {" "}
-              <b> Descritption:</b> {transaction.description}
-            </p>
-            <p>
-              <b>From:</b> {transaction.from}
-            </p>
-            <p>
-              <b>Category:</b> {transaction.category}
-            </p>
-            <p>
-              <b></b>
-            </p>
-          </li>
-        </ol>{" "}
-      </Link>
+    <div style={{}} className="Transaction-Show" key={id}>
+      {/* TABLE ELEMENTS */}
+      <table>
+        <thead>
+          <tr>
+            <th className="TableHead">ID</th>
+            <th className="TableHead">Date</th>
+            <th className="TableHead">Name</th>
+            <th className="TableHead">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <Link to={`/transactions/${id}`}>
+              <td className="TableId"> {transaction.id}</td>
+            </Link>
+
+            <td>{transaction.date}</td>
+            <td>{transaction.item_name}</td>
+            <td className="Amount">{transaction.amount}</td>
+          
+        <button   onClick={() => {
+            navigate(`/transactions/${id}/edit`);
+          }} >"📝"</button>
+    
+          </tr>
+        </tbody>
+      </table>
+     
     </div>
   );
 }

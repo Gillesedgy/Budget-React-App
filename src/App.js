@@ -24,7 +24,7 @@ function App() {
           {/* <Charts /> */}
           <Routes>
             <Route path="/" element={<Home />}></Route>
-            <Route path="/transactions" element={<Index setTotal={setTotal} />}></Route>
+            <Route path="/transactions" element={<Index />}></Route>
             <Route path="/transactions/:id" element={<Show />}></Route>
             <Route path="/transactions/:id/edit" element={<Edit />}></Route>
             <Route path="/transactions/new" element={<New />}></Route>

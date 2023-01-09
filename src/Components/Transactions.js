@@ -23,24 +23,11 @@ export default function Transactions() {
       });
   }, []);
 
-  // TOTAL EXPENSES...
-  // let sum = transactions.reduce((acc, transaction) => {
-  //   if (transaction.category === "Expense") {
-  //     acc -= Number(transaction.amount);
-  //   } else if (transaction.category === "Income") {
-  //     acc += Number(transaction.amount);
-  //   }
-
-  //   return acc;
-  // }, 0);
-
-  // SORTING DATE BY DAY AND TIME
-
   return (
     <div className="Transactions">
       <div className="Graph">
-        <Chart transactions={transactions}/>
-         {/* <h3>Amount:<span>${sum}</span></h3>  */}
+        <Chart transactions={transactions} />
+        {/* <h3>Amount:<span>${sum}</span></h3>  */}
       </div>
 
       {/*  //! RETURNS LISTS OF TRANSACTIONS */}
@@ -48,6 +35,7 @@ export default function Transactions() {
         return (
           <div key={transaction.id}>
             {" "}
+          
             <Transaction transaction={transaction} id={id} />
           </div>
         );

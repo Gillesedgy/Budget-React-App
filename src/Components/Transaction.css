@@ -1,8 +1,48 @@
-.Transaction-Show a  {
-    text-decoration: none;
-    color:black
+/* .Transaction-Show {
+  text-decoration: none;
+  border: 2px solid black;
+  display: flex;
+  justify-content: space-between;
 }
+ */
 .Transaction-Show a :hover {
-    text-decoration: none;
-    color:green
+  text-decoration: none;
+  color: green;
+} 
+.Transaction-Show a {
+  text-decoration: none;
+  color: black;
+  border: none;
+  background: none;
+} 
+table {
+    border-collapse: collapse;
+    
+  }
+  
+  td, th {
+   
+    border: 1px solid #999;
+    padding: 0.5rem;
+    text-align: left;
+   
+  }
+  
+ 
+  th{
+    background-color: grey;
+
+
 }
+ .TableId {
+    border: none;
+  width: 100px;
+ }
+  .Amount{
+    border-right: 6px solid red;
+    border-bottom: 1px solid red;
+  }
+
+  .TableHead{
+    width: 100px;
+  }

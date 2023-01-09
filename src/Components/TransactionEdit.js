@@ -57,7 +57,7 @@ export default function TransactionEdit() {
             onChange={handleTextChange}
             required
           />
-
+<br />
           <label htmlFor="id">ID: </label>
           <input
             type="text"
@@ -67,7 +67,7 @@ export default function TransactionEdit() {
             onChange={handleTextChange}
             required
           />
-
+<br />
           <label htmlFor="item_name">Name:</label>
           <input
             type="text"
@@ -77,7 +77,7 @@ export default function TransactionEdit() {
             onChange={handleTextChange}
             required
           />
-
+<br />
           <label htmlFor="amount">Amount: </label>
           <input
             type="text"
@@ -86,7 +86,7 @@ export default function TransactionEdit() {
             onChange={handleTextChange}
             required
           />
-
+<br />
           <label htmlFor="from">From: </label>
           <input
             type="text"
@@ -95,7 +95,7 @@ export default function TransactionEdit() {
             onChange={handleTextChange}
             required
           />
-
+<br />
           <label htmlFor="description">Description: </label>
           <input
             type="text"
@@ -104,6 +104,7 @@ export default function TransactionEdit() {
             onChange={handleTextChange}
             required
           />
+          <br />
             <label htmlFor="category">Category: </label>
         <select
           id="category"
@@ -116,13 +117,13 @@ export default function TransactionEdit() {
           <option id="expense">Expense</option>
           {/* <option value=""></option> */}
         </select>
-
+        <br />
           <input
             type="submit"
             //  disabled="disabled"
           />
         </form>
-
+        <br />
         <button
           onClick={() => {
             navigate(`/transactions/${id}`);
