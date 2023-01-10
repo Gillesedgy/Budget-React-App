@@ -5,6 +5,7 @@ import { useState } from "react";
 import Navigation from "./Components/Navigation";
 import Footer from "./Components/Footer";
 import Charts from "./Components/Charts";
+import Modal from "./Components/Modal";
 //PAGES
 
 import Home from "./Pages/Home";
@@ -15,7 +16,7 @@ import Error from "./Pages/Error";
 import New from "./Pages/New";
 // import { Chart } from "chart.js";
 function App() {
-  
+  const [showModal, setShowModal] = useState(false);
   return (
     <div className="App">
       <Router>
@@ -24,7 +25,7 @@ function App() {
           {/* Show on all pages */}
           {/* <Charts /> */}
           <Routes>
-            <Route path="/" element={<Home />}></Route>
+            <Route path="/" element={<Home showModal={showModal} setShowModal={setShowModal} />}></Route>
             <Route path="/transactions" element={<Index />}></Route>
             <Route path="/transactions/:id" element={<Show />}></Route>
             <Route path="/transactions/:id/edit" element={<Edit />}></Route>
@@ -32,8 +33,10 @@ function App() {
             <Route path="*" element={<Error />}></Route>
           </Routes>
         </main>
-        {/* <Footer/> */}
+        {/* <Footer/> */} 
+        <Modal showModal={showModal} setShowModal={setShowModal} />
       </Router>
+     
     </div>
   );
 }

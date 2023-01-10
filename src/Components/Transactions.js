@@ -26,7 +26,7 @@ export default function Transactions() {
   return (
     <div className="Transactions">
       <div className="Graph">
-        <Chart transactions={transactions} />
+        {/* <Chart transactions={transactions} /> */}
         {/* <h3>Amount:<span>${sum}</span></h3>  */}
       </div>
 

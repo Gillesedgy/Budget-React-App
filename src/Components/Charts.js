@@ -48,7 +48,7 @@ export default function Charts({ transactions }) {
           {...config}
           // data={data}
         ></Doughnut>  </div>
-        <h3 className="Title">
+        <h3 className="Chart-Title">
           Amount:{" "}
           <span className="Sum">
             $ <em> {sum.toLocaleString("en-US")}</em>

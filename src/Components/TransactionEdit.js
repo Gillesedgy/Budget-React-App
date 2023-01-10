@@ -1,7 +1,9 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
-import './Edit.css'
+import "./Edit.css";
+//
+import background from "../Assets/formbackground.png";
 const API = process.env.REACT_APP_API_URL;
 
 export default function TransactionEdit() {
@@ -45,10 +47,12 @@ export default function TransactionEdit() {
   };
 
   return (
-    <div>
-      <div className="NewTransaction-Container">
+    <div className="backgroundImg">
+    
+      <div className="EditTransaction-Container">
         <form onSubmit={handleSubmit}>
-          <label htmlFor="date">Date: </label>
+          <h2 className="h2title">Edit</h2>
+          <h1>Transaction</h1>
           <input
             type="text"
             id="date"
@@ -57,8 +61,7 @@ export default function TransactionEdit() {
             onChange={handleTextChange}
             required
           />
-<br />
-          <label htmlFor="id">ID: </label>
+          <br />
           <input
             type="text"
             id="id"
@@ -67,70 +70,70 @@ export default function TransactionEdit() {
             onChange={handleTextChange}
             required
           />
-<br />
-          <label htmlFor="item_name">Name:</label>
+          <br />
           <input
             type="text"
             id="item_name"
             value={transaction.item_name}
-            placeholder=""
+            placeholder="Transaction Name"
             onChange={handleTextChange}
             required
           />
-<br />
-          <label htmlFor="amount">Amount: </label>
+          <br />
           <input
             type="text"
             id="amount"
             value={transaction.amount}
             onChange={handleTextChange}
+            placeholder="Enter Transaction ID"
             required
           />
-<br />
-          <label htmlFor="from">From: </label>
+          <br />
           <input
             type="text"
             id="from"
             value={transaction.from}
             onChange={handleTextChange}
+            placeholder="From"
             required
           />
-<br />
-          <label htmlFor="description">Description: </label>
+          <br />
+          {/* <label htmlFor="description">Description: </label> */}
           <input
             type="text"
             id="description"
             value={transaction.description}
             onChange={handleTextChange}
+            placeholder="Description"
             required
           />
           <br />
-            <label htmlFor="category">Category: </label>
-        <select
-          id="category"
-          onChange={handleTextChange}
-          value={transaction.category}
-          className="Select"
-        >
-          <option value=""></option>
-          <option id="income">Income</option>
-          <option id="expense">Expense</option>
-          {/* <option value=""></option> */}
-        </select>
-        <br />
+          <select
+            id="category"
+            onChange={handleTextChange}
+            value={transaction.category}
+            className="Edit-Select"
+          >
+            <option value="">Category</option>
+            <option id="income">Income</option>
+            <option id="expense">Expense</option>
+          </select>
+          <br />
           <input
             type="submit"
+            className="edit-submit"
             //  disabled="disabled"
-          />
+          />{" "}
+          <button
+            className="edit-submit"
+            onClick={() => {
+              navigate(`/transactions/${id}`);
+            }}
+          >
+            Back
+          </button>
         </form>
         <br />
-        <button
-          onClick={() => {
-            navigate(`/transactions/${id}`);
-          }}
-        >
-        🔙
-        </button>
       </div>
     </div>
   );

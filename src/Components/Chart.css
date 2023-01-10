@@ -7,7 +7,7 @@
 
 
 
- .Title {
+ .Chart-Title {
   position: absolute;
   left: 0;
   right: 0;
@@ -26,8 +26,9 @@ h3{
     color: black
     }
 .Chart-Container{
+    display: flex;
+    position: relative;
     width: 50%;
     height:60%;
-    position: relative;
 } 
 /* -------------------- */

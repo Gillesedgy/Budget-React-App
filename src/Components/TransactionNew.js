@@ -37,78 +37,79 @@ export default function TransactionNew() {
   return (
     <div className="NewTransaction-Container">
       <form onSubmit={handleSubmit}>
-        <label htmlFor="date">Date: </label>
+        {/* <label htmlFor="date">Date: </label> */}
         <input
           type="date"
           id="date"
           value={transaction.date}
-          placeholder=""
           onChange={handleTextChange}
           required
         />
         <br />
-        <label htmlFor="id">ID: </label>
+        {/* <label htmlFor="id">ID: </label> */}
         <input
           type="text"
           id="id"
           value={transaction.id}
-          placeholder=""
           onChange={handleTextChange}
           required
         />
         <br />
-        <label htmlFor="item_name">Name:</label>
+        {/* <label htmlFor="item_name">Name:</label> */}
         <input
           type="text"
           id="item_name"
           value={transaction.item_name}
-          placeholder=""
+          placeholder="Enter Name"
           onChange={handleTextChange}
           required
         />
         <br />
-        <label htmlFor="amount">Amount: </label>
+        {/* <label htmlFor="amount">Amount: </label> */}
         <input
           type="number"
           id="amount"
           value={transaction.amount}
           onChange={handleTextChange}
+          placeholder="Enter Amount"
           required
         />
         <br />
-        <label htmlFor="from">From: </label>
+        {/* <label htmlFor="from">From: </label> */}
         <input
           type="text"
           id="from"
           value={transaction.from}
+          placeholder="From"
           onChange={handleTextChange}
           required
         />
         <br />
-        <label htmlFor="description">Description: </label>
+        {/* <label htmlFor="description">Description: </label> */}
         <input
           type="text"
           id="description"
           value={transaction.description}
           onChange={handleTextChange}
+          placeholder="Description"
           required
         />
         <br />
-        <label htmlFor="category">Category: </label>
+        {/* <label htmlFor="category">Category: </label> */} <p> Select a Category:</p>
         <select
           id="category"
           onChange={handleTextChange}
           value={transaction.category}
-          className="Select"
-        >
-          <option value="">----------</option>
+          className="New-Select"
+          >
+          <option value="">Category</option>
           <option id="income">Income</option>
           <option id="expense">Expense</option>
-          {/* <option value="premium">Premium</option> */}
+        
         </select>
 
-        <p> Select one from the given options:</p>
-        <input type="submit" />
+       
+        <input className='new-submit'type="submit" />
       </form>
 
       <button

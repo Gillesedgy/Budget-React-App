@@ -1,6 +1,61 @@
-input[type=text] {
-    width: 90vw;
+.backgroundImg{
+  position: absolute;
+  /* top: 0; */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-image: url("../Assets/formbackground.png");
+  /* opacity: 0.7; */
+
+}
+
+
+
+input /* [type=text]  */{
+    width: 50vw;
     padding: 12px 20px;
-    margin: 8px ;
-    box-sizing: border-box;
+    margin: 10px 0 ;
+    /* box-sizing: border-box; */
+
   }
+  input:hover{
+color: rgba #85bb65;
+  }
+  .EditTransaction-Container{
+    /* background-image:url('../Assets/formbackground.png'); */
+    background-repeat: no-repeat;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;  
+    z-index: 1000;
+      }
+  .edit-submit{
+    text-transform: uppercase;
+    padding: 10px;
+   /* margin: 8px; */
+   width: 90px;
+  }
+  .edit-submit:hover{
+color:#85bb65;
+  } 
+
+  .Edit-Select{
+    padding:8px;
+    width: 90px;
+margin: 10px; 
+ margin-left: 45px;
+  }
+  .EditTransaction-Container h1, .h2title{
+/* margin-right: 90px; */
+color: #85bb65;
+text-transform: uppercase;
+
+   }
+   .EditTransaction-Container .h2title:hover{
+    /* margin-right: 90px; */
+    color: #85bb65;
+  letter-spacing: .1em;
+       }
