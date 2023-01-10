@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import "./Edit.css";
 //
-import background from "../Assets/formbackground.png";
+// import background from "../Assets/formbackground.png";
 const API = process.env.REACT_APP_API_URL;
 
 export default function TransactionEdit() {
