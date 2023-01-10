@@ -9,7 +9,7 @@ export default function Navigation() {
   let navigate = useNavigate();
   return (
     <nav>
-      {/* //* I want buttons to be far Left of the screen --> CCS  */}
+      
       <button
         onClick={() => {
           navigate("/transactions");
@@ -20,7 +20,7 @@ export default function Navigation() {
       </button>
       <Link to={"/"}>
         {" "}
-        <h1>Budget App</h1>
+        <h1>dotReduce(💲)</h1>
       
       </Link>
 

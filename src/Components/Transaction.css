@@ -6,8 +6,9 @@
 }
  */
 .Transaction-Show a :hover {
-  text-decoration: none;
-  color: green;
+  font-weight: bold;
+  color: rgb(161, 161, 248);
+  cursor: pointer;
 } 
 .Transaction-Show a {
   text-decoration: none;
@@ -33,6 +34,13 @@ table {
   th{
     background-color: grey;
 
+}
+.IndexButton{
+    background-color: rgb(156, 13, 13);
+    border: none;
+    background-color: transparent;
+    padding-bottom: 10px;
+  
 }
  /* .TableId {
   

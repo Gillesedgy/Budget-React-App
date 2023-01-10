@@ -44,7 +44,7 @@ export default function Transactions() {
       <div>
         {" "}
         <p>
-          <b>Balance</b>: <b>$</b>
+          {/* <b>Balance</b>: <b>$</b> */}
           {/* <em> {sum.toLocaleString("en-US")}</em>{" "} */}
         </p>
       </div>
