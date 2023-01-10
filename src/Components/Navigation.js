@@ -9,7 +9,7 @@ export default function Navigation() {
   let navigate = useNavigate();
   return (
     <nav>
-      
+      {/* <a href=""></a> */}
       <button
         onClick={() => {
           navigate("/transactions");
@@ -20,7 +20,7 @@ export default function Navigation() {
       </button>
       <Link to={"/"}>
         {" "}
-        <h1>dotReduce(💲)</h1>
+        <h1 className="dotReduce">dotReduce(💲)</h1>
       
       </Link>
 

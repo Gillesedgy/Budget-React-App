@@ -1,4 +1,192 @@
-.Home {
+/*! Home Page v2 */
+@import url("https://fonts.googleapis.com/css2?family=Simonetta:ital,wght@0,400;0,900;1,400;1,900&display=swap");
+
+.Home-Container {
+  position: absolute;
+  box-sizing: border-box;
+  font-family: "Simonetta", cursive;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: grey;
+  z-index: 2;
+}
+/* //! */
+.Home-Container.active{
+   right: 300px; 
+}
+
+.Home-Container aside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40 px 100px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.Logo {
+  color: silver;
+  font-family: "Simonetta", cursive;
+  font-size: 2em;
+  font-weight: bold;
+}
+.Toggle {
+  position: relative;
+  width: 30px;
+  height: 60px;
+  background-image: url("../Assets/menu.png");
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
+}
+
+.Toggle.active {
+  background-image: url("../Assets/close.png");
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: center;
+}
+.Home-Container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+}
+.Text-Container {
+  position: relative;
+  z-index: 10;
+}
+.Text-Container h3 {
+  font-size: 5em;
+  font-family: "Simonetta", cursive;
+  font-weight: 900;
+  margin-bottom: 1em;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.Text-Container h2 {
+  font-size: 3.6em;
+  font-family: "Simonetta", cursive;
+  font-weight: 400;
+  margin-bottom: 1em;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.Text-Container p {
+  font-family: "Simonetta", cursive;
+  font-size: 1.3em;
+  margin: 25px 0;
+  font-weight: 400px;
+  max-width: 700px; /* to stay where it is when expended  */
+  color: silver;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.1
+  ); /* background-color: #e2f5b1;
+    mix-blend-mode: overlay; */
+}
+
+.Text-Container a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  background: whitesmoke;
+  font-family: "Simonetta", cursive;
+  padding: 10px 30px;
+  letter-spacing: 1.5px;
+  transition: 0.5s;
+}
+
+.Text-Container a:hover {
+  letter-spacing: 10px;
+  color: #85bb65;
+}
+
+.Social {
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Social li {
+  list-style-type: none;
+}
+
+.Social li a {
+  display: inline-block;
+  transform: scale(0.2);
+  margin-right: 10px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.Social li a:hover {
+  transform: scale(0.4) translateY(-15px);
+}
+.Menu {
+  position: absolute;
+
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  background-color: aliceblue;
+}
+
+.Menu ul {
+  position: relative;
+  list-style: none;
+}
+.Menu ul li a {
+  text-decoration: none;
+  font-size: 24px;
+  color: black;
+}
+.Menu ul li a:hover {
+  color:#85bb65;
+ letter-spacing: 5px;
+}
+
+@media (max-width: 798px) {
+  .Home-Container,
+  .Home-Container aside {
+    padding: 40px;
+  }
+  .Text-Container h3 {
+    font-size: 2.3rem;
+  }
+  Text-Container h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* *Home v1 */
+/* .Home {
   height: 100vh;
   width: 100vw;
 }
@@ -28,5 +216,6 @@ video {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  /* background-color: #000000cc */
-}
+} */
+
+/* background-color: #000000cc */

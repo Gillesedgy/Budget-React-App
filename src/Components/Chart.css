@@ -1,5 +1,13 @@
-.Title {
-  /* color: green; */
+
+
+
+
+
+
+
+
+
+ .Title {
   position: absolute;
   left: 0;
   right: 0;
@@ -21,4 +29,5 @@ h3{
     width: 50%;
     height:60%;
     position: relative;
-}
+} 
+/* -------------------- */
