@@ -48,7 +48,6 @@ export default function TransactionEdit() {
 
   return (
     <div className="backgroundImg">
-    
       <div className="EditTransaction-Container">
         <form onSubmit={handleSubmit}>
           <h2 className="h2title">Edit</h2>
