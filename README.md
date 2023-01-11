@@ -1,6 +1,9 @@
 # Budget-React-App
  Backend-Server: https://budget-deployed-server.onrender.com
+ Backend GitHub: https://github.com/Gillesedgy/Budget-App-Server
 
+Deployed: https://tangerine-concha-d8c835.netlify.app/
+Frontend GitHub: https://github.com/Gillesedgy/Budget-React-App
 
 User Stories
 You must successfully build a minimum of 6 out of 9 features to pass this project
