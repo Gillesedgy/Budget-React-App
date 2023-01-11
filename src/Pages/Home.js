@@ -4,14 +4,17 @@ import money from "../Assets/money.mp4";
 import GitHub from "../Assets/Github.png";
 import LinkedIn from "../Assets/LinkedIn.png";
 import BabySteps from "../Assets/BabySteps.png";
-import menuIcon from "../Assets/menu.png";
-import closeIcon from "../Assets/close.png";
+import VPN from "../Assets/ExpressVPN.png";
+//! for toggle menue
+// import menuIcon from "../Assets/menu.png";
+// import closeIcon from "../Assets/close.png";
 import YT from "../Assets/YT.png";
 import { useState } from "react";
 export default function Home() {
-  const [toggle, setToggle] = useState("inactive");
-  const [menu, setMenu] = useState();
-  //TOGGLE FUNCTIONALITY
+  const [toggle, setToggle] = useState("false");
+  const [menu, setMenu] = useState(false);
+
+  //!TOGGLE FUNCTIONALITY coming soon 
 
   // const handleToggleClick=()=>{
   //   setToggle(!toggle)
@@ -31,8 +34,10 @@ export default function Home() {
   return (
     <>
       <section className="Home-Container ">
+        
         <aside>
-          <h2 className="Logo ">Welcome To dotReduce(💲)</h2>
+         <span><h2 className="Logo ">Welcome To dotReduce(💲)</h2>  <p>This budget appliccation will help you bring your spending down to a smaller extent, reduce any IMPULSIVE buys by 10X. <br />
+         </p></span> 
           <div className="Toggle "> </div>
         </aside>
 
@@ -45,14 +50,13 @@ export default function Home() {
             So One Day You Can <b>Really Live</b> Like No One Else{" "}
           </h2>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias iure
-            ipsam, dolorum nobis ea nulla. Quos sunt nihil debitis quaerat!
+            You don’t have to see the whole staircase, just take the first step. – Martin Luther King, Jr.
           </p>
           <a href="something fun here">EXPLORE</a>
         </div>
         <ul className="Social">
           <li>
-            <a href="BabyStep" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.ramseysolutions.com/dave-ramsey-7-baby-steps?gclid=Cj0KCQiAtvSdBhD0ARIsAPf8oNmzwcCwnhUyR09hV2cjCkDB4ov1Rx93LukpnMX1EmfVmNfiV3g7jdgaAiwsEALw_wcB" target="_blank" rel="noopener noreferrer">
               <img src={BabySteps} alt="LinkedIn_logo" />
             </a>
           </li>
@@ -74,15 +78,22 @@ export default function Home() {
               <img src={YT} alt="LinkedIn_logo" />
             </a>
           </li>
+          <li>
+            {" "}
+            <a href="https://www.expressrefer.com/refer-a-friend/30-days-free?referrer_id=53809949&utm_campaign=referrals&utm_medium=copy_link&utm_source=referral_dashboard" target="_blank" rel="noopener noreferrer">
+              <img src={VPN} alt="VPN_logo" />
+            </a>
+          </li>
+
 
           {/* /! SWAP MENU CONTENTS WITH SOCIALS */}
         </ul>
       </section>
       <div className="Menu ">
         <ul>
-          {/* <li>
-            <a href="http://localhost:3000/transactions" target="_blank" rel="noopener noreferrer">Home</a>
-          </li> */}
+          <li>
+            <a href="https://63bde8741f2eee068c3fb255--tangerine-concha-d8c835.netlify.app/" target="_blank" rel="noopener noreferrer">Home</a>
+          </li>
           <li>
             {" "}
             <a href="zhttps://www.ramseysolutions.com/dave-ramsey-7-baby-steps" target="_blank" rel="noopener noreferrer">

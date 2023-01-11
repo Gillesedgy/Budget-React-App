@@ -21,6 +21,7 @@ export default function Charts({ transactions }) {
           ],
           hoverOffset: 9,
           borderRadius: 30,
+          // borderWidth:1,
           spacing: 20,
           weight: 100,
         },
@@ -49,7 +50,7 @@ export default function Charts({ transactions }) {
           // data={data}
         ></Doughnut>  </div>
         <h3 className="Chart-Title">
-          Amount:{" "}
+          Amount: <br />
           <span className="Sum">
             $ <em> {sum.toLocaleString("en-US")}</em>
           </span>

@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import './TransactionDetails.css'
+
 //! API
 const API = process.env.REACT_APP_API_URL;
 
@@ -9,7 +10,6 @@ export default function TransactionDetails() {
   const [transaction, setTransaction] = useState([]);
   let { id } = useParams();
   let navigate = useNavigate();
-
   //UseEffect
   useEffect(() => {
     axios
@@ -33,36 +33,10 @@ export default function TransactionDetails() {
   };
   return (
   
-    <>
-    
-      {/* <article className="Transaction-Container">
-        <ol>
-          <p>
-            <b>Date:</b> {transaction.date}
-          </p>
-          <li>
-            <b> ID:</b> {transaction.id}
-            <p>
-              <b>Name:</b> {transaction.item_name}:{" "}
-              <span>$ {transaction.amount}</span>
-            </p>
-            <p>
-              {" "}
-              <b> Descritption:</b> {transaction.description}
-            </p>
-            <p>
-              <b>From:</b> {transaction.from}
-            </p>
-            <p>
-              <b>Category:</b> {transaction.category}
-            </p>
-            <p>
-              <b></b>
-            </p>
-          </li>
-        </ol>
-      </article> */}
-       <table>
+    <div className="Details">
+  
+  <h1>Details</h1>
+       <table className="TableDetails">
         <thead>
           <tr>
             <th >ID</th>
@@ -88,22 +62,22 @@ export default function TransactionDetails() {
       </table>
       <div className="Transaction-Buttons">
         {" "}
-        <button onClick={handleDelete}>BETTER DELETE BUTTON</button>
+        <button onClick={handleDelete}>DELETE </button>
         <button
           onClick={() => {
             navigate(`/transactions/${id}/edit`);
           }}
         >
-          BETTER EDIT BUTTON
-        </button>
+        EDIT
+        </button> <br />
         <button
           onClick={() => {
             navigate(`/transactions`);
           }}
         >
-         🔙
+       Back
         </button>
       </div>
-    </>
+    </div>
   );
 }

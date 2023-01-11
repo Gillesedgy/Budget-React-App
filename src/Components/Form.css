@@ -1,0 +1,97 @@
+.backgroundImg {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  background-image: url("../Assets/money.jpeg"); 
+}
+
+input /* [type=text]  */ {
+  width: 50vw;
+  padding: 12px 20px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+input:hover {
+  color: rgba #85bb65;
+}
+.EditTransaction-Container {
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1000;
+  
+}
+.edit-submit {
+ 
+    display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  background: whitesmoke;
+  font-family: "Simonetta", cursive;
+  padding: 10px 30px;
+  letter-spacing: 1.5px;
+  transition: 0.5s;
+  margin:10px;
+
+  text-transform: uppercase;
+}
+nav button:hover{
+    letter-spacing: 0.2em;
+}
+
+.edit-submit:hover {
+  color: #85bb65;
+}
+
+.Edit-Select {
+  padding: 8px;
+  width: 100px;
+  margin: 10px;
+  margin-left: 200px;
+  display: flex;
+  left: 200px;
+}
+.EditTransaction-Container h1,
+.h2title {
+  color: #85bb65;
+  text-transform: uppercase;
+  text-shadow:3px 3px rgba(255, 255, 255);
+}
+.EditTransaction-Container .h2title:hover {
+  color: #85bb65;
+  letter-spacing: 0.1em;
+}
+.h2title2 {
+  font-size: 2.5em;
+  color: silver;
+  text-shadow: 3px 3px rgba(255, 255, 255);
+}
+p {
+  color: whitesmoke;
+  font-size: 1em;
+}
+
+@media (max-width: 798px) {
+  .edit-submit {
+    text-transform: uppercase;
+    padding: 10px;
+    /* margin: 8px; */
+    width: 90px;
+    margin-left: 10px;
+  }
+  .edit-submit:hover {
+    color: #b87333;
+  }
+  p {
+    color: red;
+    font-size: 1em;
+  }
+  .Edit-Select:hover {
+    color: #b87333;
+  }
+}

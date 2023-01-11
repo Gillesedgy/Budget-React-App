@@ -1,13 +1,19 @@
-/* .Transaction-Show {
+.Transaction-Show {
   text-decoration: none;
-  border: 2px solid black;
+  width: 100vw;
+bottom: 0;
+  margin: 10px 0;
+  box-sizing: border-box;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+ 
 }
- */
+
+
+
 .Transaction-Show a :hover {
   font-weight: bold;
-  color: rgb(161, 161, 248);
+  color:rgb(59,104,150);
   cursor: pointer;
 } 
 .Transaction-Show a {
@@ -29,6 +35,9 @@ table {
     width: 100px;
    
   }
+  td{
+    background-color: rgb(232, 238, 238);
+  }
   
  
   th{
@@ -36,18 +45,10 @@ table {
 
 }
 .IndexButton{
-    background-color: rgb(156, 13, 13);
+    /* background-color: rgb(156, 13, 13); */
     border: none;
     background-color: transparent;
     padding-bottom: 10px;
   
 }
- /* .TableId {
-  
-  width: 100px;
- }
  
-
-  .TableHead{
-    width: 100px;
-  } */

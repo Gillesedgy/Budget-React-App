@@ -25,29 +25,22 @@ export default function Transactions() {
 
   return (
     <div className="Transactions">
-      <div className="Graph">
-        {/* <Chart transactions={transactions} /> */}
-        {/* <h3>Amount:<span>${sum}</span></h3>  */}
-      </div>
-
-      {/*  //! RETURNS LISTS OF TRANSACTIONS */}
+         <div className="Graph"><Chart transactions={transactions} />
+     
+      </div>   
+      <h1 className="Transactions-Title">List Of Transactions</h1>
+     
       {transactions.map((transaction, id) => {
         return (
-          <div key={transaction.id}>
+          <div className="Transaction-Table" key={transaction.id}>
             {" "}
-          
+      
             <Transaction transaction={transaction} id={id} />
           </div>
         );
       })}
-      <br />
-      <div>
-        {" "}
-        <p>
-          {/* <b>Balance</b>: <b>$</b> */}
-          {/* <em> {sum.toLocaleString("en-US")}</em>{" "} */}
-        </p>
-      </div>
+  
+      
     </div>
   );
 }

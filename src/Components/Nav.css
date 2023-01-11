@@ -1,13 +1,14 @@
 nav{
-border  : 1px solid black;
+border  : 1px solid rgb(6, 42, 41);
 padding: 2em 0;
 text-align: center;
-background-color:#85bb65;
-
+background-color: #3b6896;
+/* background-color: black; */
 display: flex;
-
 align-items: center;
 justify-content: space-evenly;
+
+
 }
 nav a {
     text-decoration: none;
@@ -19,19 +20,19 @@ height: 20px;
 width: auto;
 }
 
-.NewTransaction{
-    /* margin-top: 1em; */
-}
-/* nav a {
+nav button{
     display: inline-block;
-    text-decoration: none;
-    color: inherit;
-    background: whitesmoke;
-    font-family: "Simonetta", cursive;
-    padding: 10px 30px ;
-    
-   
+  text-decoration: none;
+  color: inherit;
+  background: whitesmoke;
+  font-family: "Simonetta", cursive;
+  padding: 10px 30px;
+  letter-spacing: 1.5px;
+  transition: 0.5s;
+  margin:10px;
+
+  text-transform: uppercase;
 }
-.dotReduce{
-    
-} */
+nav button:hover{
+    letter-spacing: 0.2em;
+}

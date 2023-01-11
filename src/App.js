@@ -3,8 +3,8 @@ import "./App.css";
 import { useState } from "react";
 // COMPONENTS
 import Navigation from "./Components/Navigation";
-import Footer from "./Components/Footer";
-import Charts from "./Components/Charts";
+
+
 import Modal from "./Components/Modal";
 //PAGES
 
@@ -20,20 +20,19 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Navigation />
+        <Navigation  />
         <main>
-          {/* Show on all pages */}
-          {/* <Charts /> */}
+        
           <Routes>
             <Route path="/" element={<Home showModal={showModal} setShowModal={setShowModal} />}></Route>
-            <Route path="/transactions" element={<Index />}></Route>
+            <Route path="/transactions" element={<Index  />}></Route>
             <Route path="/transactions/:id" element={<Show />}></Route>
             <Route path="/transactions/:id/edit" element={<Edit />}></Route>
             <Route path="/transactions/new" element={<New />}></Route>
             <Route path="*" element={<Error />}></Route>
           </Routes>
         </main>
-        {/* <Footer/> */} 
+    
         <Modal showModal={showModal} setShowModal={setShowModal} />
       </Router>
      

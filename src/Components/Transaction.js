@@ -1,17 +1,16 @@
 import { Link, useNavigate } from "react-router-dom";
 import "./Transaction.css";
-// icons
-// import editButton from "../Assets/editButton.png";
-//*
+
 export default function Transaction({ transaction, id }) {
   let navigate = useNavigate();
 
-  // const handleClick =()=>{
-  //   navigate(`/transaction/${id}`);
-  // }
+ 
   return (
+   
+   
     <div className="Transaction-Show" key={id}>
-      {/* TABLE ELEMENTS */}
+
+           
       <table>
         <thead>
           <tr>
@@ -43,11 +42,11 @@ export default function Transaction({ transaction, id }) {
       </table>
             <button className="IndexButton"
               onClick={() => {
-                navigate(`/transactions/${id}/edit`);
+                navigate(`/transactions/${id}`);
               }}
             >
-              📝
+            🔎
             </button>
-    </div>
+    </div> 
   );
 }

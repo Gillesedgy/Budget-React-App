@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
-import "./Edit.css";
+import "./Form.css";
 //
 // import background from "../Assets/formbackground.png";
 const API = process.env.REACT_APP_API_URL;
@@ -50,7 +50,7 @@ export default function TransactionEdit() {
     <div className="backgroundImg">
       <div className="EditTransaction-Container">
         <form onSubmit={handleSubmit}>
-          <h2 className="h2title">Edit</h2>
+          <h2 className="h2title2">Edit</h2>
           <h1>Transaction</h1>
           <input
             type="text"

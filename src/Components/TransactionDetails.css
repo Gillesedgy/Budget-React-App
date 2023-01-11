@@ -2,3 +2,39 @@ td, th {
     border: 1px solid #999;
     padding: 0.5rem;
   }
+
+  .Details{
+ background-image: url("../Assets/money.jpeg");
+    height: 100vh;
+    /* margin: 20px; */
+    text-align: center;
+   
+  }
+  .Details h1{
+    color: #999;
+    text-shadow:3px 3px #85bb65 ;
+  }
+.Transaction-Buttons button{
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  background: whitesmoke;
+  font-family: "Simonetta", cursive;
+  padding: 10px 30px;
+  letter-spacing: 1.5px;
+  transition: 0.5s;
+  margin:10px;
+  text-transform: uppercase;
+}
+
+.Transaction-Buttons button:hover{
+  letter-spacing: 2px;
+  color: #85bb65;
+}
+.Transaction-Buttons {
+  margin-right: 200px;
+ }
+  .TableDetails{
+    margin: 10px;
+
+  }
