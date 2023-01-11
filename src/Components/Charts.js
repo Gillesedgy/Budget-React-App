@@ -47,7 +47,7 @@ export default function Charts({ transactions }) {
       <div className="Chart-Container">
         <Doughnut
           {...config}
-          // data={data}
+          
         ></Doughnut>  </div>
         <h3 className="Chart-Title">
           Amount: <br />

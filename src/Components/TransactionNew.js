@@ -48,7 +48,6 @@ export default function TransactionNew() {
             required
           />
           <br />
-          {/* <label htmlFor="id">ID: </label> */}
           <input
             type="text"
             id="id"
@@ -57,7 +56,7 @@ export default function TransactionNew() {
             required
           />
           <br />
-          {/* <label htmlFor="item_name">Name:</label> */}
+          
           <input
             type="text"
             id="item_name"
@@ -67,8 +66,7 @@ export default function TransactionNew() {
             required
           />
           <br />
-          {/* <label htmlFor="amount">Amount: </label> */}
-          <input
+                 <input
             type="number"
             id="amount"
             value={transaction.amount}
@@ -77,7 +75,6 @@ export default function TransactionNew() {
             required
           />
           <br />
-          {/* <label htmlFor="from">From: </label> */}
           <input
             type="text"
             id="from"
@@ -87,7 +84,7 @@ export default function TransactionNew() {
             required
           />
           <br />
-          {/* <label htmlFor="description">Description: </label> */}
+          
           <input
             type="text"
             id="description"
@@ -97,7 +94,7 @@ export default function TransactionNew() {
             required
           />
           <br />
-          {/* <label htmlFor="category">Category: </label> */}{" "}
+          
           <p>
             {" "}
             <b>Select a Category:</b>{" "}

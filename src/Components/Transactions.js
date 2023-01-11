@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import Transaction from "./Transaction";
 import axios from "axios";
 import Chart from "./Charts";
-
-//
 import "./Transactions.css";
 
 const API = process.env.REACT_APP_API_URL;
@@ -25,7 +23,8 @@ export default function Transactions() {
 
   return (
     <div className="Transactions">
-         <div className="Graph"><Chart transactions={transactions} />
+         <div className="Graph">
+          <Chart transactions={transactions} />
      
       </div>   
       <h1 className="Transactions-Title">List Of Transactions</h1>

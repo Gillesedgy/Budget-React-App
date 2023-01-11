@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams, useNavigate, Link } from "react-router-dom";
-import './TransactionDetails.css'
+import { useParams, useNavigate } from "react-router-dom";
+import "./TransactionDetails.css";
 
 //! API
 const API = process.env.REACT_APP_API_URL;
@@ -22,6 +22,7 @@ export default function TransactionDetails() {
         navigate(`/not-found`);
       });
   }, [id, navigate]);
+
   // DELETE /transactions
   const handleDelete = () => {
     axios
@@ -32,25 +33,23 @@ export default function TransactionDetails() {
       .catch((e) => console.error(e));
   };
   return (
-  
     <div className="Details">
-  
-  <h1>Details</h1>
-       <table className="TableDetails">
+      <h1>Details</h1>
+      <table className="TableDetails">
         <thead>
           <tr>
-            <th >ID</th>
-            <th >Date</th>
-            <th >Name</th>
-            <th >Desciprion</th>
-            <th >From</th>
-            <th >Category</th>
-            <th >amount</th>
+            <th>ID</th>
+            <th>Date</th>
+            <th>Name</th>
+            <th>Desciprion</th>
+            <th>From</th>
+            <th>Category</th>
+            <th>amount</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td >  {transaction.id}</td>
+            <td> {transaction.id}</td>
             <td>{transaction.date}</td>
             <td>{transaction.item_name}</td>
             <td>{transaction.description}</td>
@@ -68,14 +67,15 @@ export default function TransactionDetails() {
             navigate(`/transactions/${id}/edit`);
           }}
         >
-        EDIT
-        </button> <br />
+          EDIT
+        </button>{" "}
+        <br />
         <button
           onClick={() => {
             navigate(`/transactions`);
           }}
         >
-       Back
+          Back
         </button>
       </div>
     </div>

@@ -4,13 +4,8 @@ import "./Transaction.css";
 export default function Transaction({ transaction, id }) {
   let navigate = useNavigate();
 
- 
   return (
-   
-   
     <div className="Transaction-Show" key={id}>
-
-           
       <table>
         <thead>
           <tr>
@@ -36,17 +31,17 @@ export default function Transaction({ transaction, id }) {
             >
               <b style={{ color: "black" }}>$</b> {transaction.amount}
             </td>
-
           </tr>
         </tbody>
       </table>
-            <button className="IndexButton"
-              onClick={() => {
-                navigate(`/transactions/${id}`);
-              }}
-            >
-            🔎
-            </button>
-    </div> 
+      <button
+        className="IndexButton"
+        onClick={() => {
+          navigate(`/transactions/${id}`);
+        }}
+      >
+        🔎
+      </button>
+    </div>
   );
 }

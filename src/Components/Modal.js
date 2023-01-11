@@ -1,8 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import closeWindow from "../Assets/close.png";
+
 import "./Modal.css";
-//
-// import closeWindow from "../Assets/close.png"
+
 export default function Modal({ showModal, setShowModal }) {
   const navigate = useNavigate();
 

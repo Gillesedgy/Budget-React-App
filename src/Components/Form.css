@@ -6,7 +6,6 @@
   object-fit: cover;
   background-image: url("../Assets/money.jpeg"); 
 }
-
 input /* [type=text]  */ {
   width: 50vw;
   padding: 12px 20px;

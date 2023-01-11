@@ -97,7 +97,6 @@ export default function TransactionEdit() {
             required
           />
           <br />
-          {/* <label htmlFor="description">Description: </label> */}
           <input
             type="text"
             id="description"
