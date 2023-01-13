@@ -2,8 +2,6 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./Form.css";
-//
-// import background from "../Assets/formbackground.png";
 const API = process.env.REACT_APP_API_URL;
 
 export default function TransactionEdit() {
@@ -18,7 +16,6 @@ export default function TransactionEdit() {
     description: "",
     category: "",
   });
-
   // TEXT CHANGE
   const handleTextChange = (e) => {
     setTransaction({ ...transaction, [e.target.id]: e.target.value });
@@ -37,7 +34,6 @@ export default function TransactionEdit() {
     e.preventDefault();
     axios
       .put(`${API}/transactions/${id}`, transaction)
-
       .then((res) => {
         navigate(`/transactions/${id}`);
       })

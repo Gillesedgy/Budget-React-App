@@ -3,11 +3,8 @@ import "./App.css";
 import { useState } from "react";
 // COMPONENTS
 import Navigation from "./Components/Navigation";
-
-
 import Modal from "./Components/Modal";
 //PAGES
-
 import Home from "./Pages/Home";
 import Index from "./Pages/Index";
 import Edit from "./Pages/Edit";
@@ -32,10 +29,8 @@ function App() {
             <Route path="*" element={<Error />}></Route>
           </Routes>
         </main>
-    
         <Modal showModal={showModal} setShowModal={setShowModal} />
       </Router>
-     
     </div>
   );
 }

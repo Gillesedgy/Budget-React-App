@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
@@ -6,6 +6,7 @@ import "./Form.css";
 //?
 const API = process.env.REACT_APP_API_URL;
 export default function TransactionNew() {
+  let {id} = useParams()
   let navigate = useNavigate();
   const [transaction, setTransaction] = useState({
     date: "",
@@ -33,7 +34,6 @@ export default function TransactionNew() {
   const handleTextChange = (event) => {
     setTransaction({ ...transaction, [event.target.id]: event.target.value });
   };
-
   return (
     <div className="backgroundImg">
       <div className="EditTransaction-Container">
@@ -56,7 +56,6 @@ export default function TransactionNew() {
             required
           />
           <br />
-          
           <input
             type="text"
             id="item_name"
@@ -66,7 +65,7 @@ export default function TransactionNew() {
             required
           />
           <br />
-                 <input
+          <input
             type="number"
             id="amount"
             value={transaction.amount}
@@ -84,7 +83,6 @@ export default function TransactionNew() {
             required
           />
           <br />
-          
           <input
             type="text"
             id="description"
@@ -94,7 +92,6 @@ export default function TransactionNew() {
             required
           />
           <br />
-          
           <p>
             {" "}
             <b>Select a Category:</b>{" "}
@@ -110,14 +107,16 @@ export default function TransactionNew() {
             <option id="expense">Expense</option>
           </select>
           <br />
-          <input className="edit-submit" type="submit" />{" "}
+          <input onClick={() => {
+              navigate(`/transactions/${id}`);
+            }} className="edit-submit" type="submit" />{" "}
           <button
             className="edit-submit"
             onClick={() => {
               navigate(`/transactions`);
             }}
           >
-           Back
+            Back
           </button>
         </form>
       </div>

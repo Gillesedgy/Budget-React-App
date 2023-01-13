@@ -45,10 +45,10 @@ export default function Charts({ transactions }) {
   return (
     <>
       <div className="Chart-Container">
-        <Doughnut
-          {...config}
-          
-        ></Doughnut>  </div>
+        {/* <Doughnut
+          {...config}          
+        ></Doughnut>   */}
+        </div>
         <h3 className="Chart-Title">
           Amount: <br />
           <span className="Sum">
